@@ -1,0 +1,87 @@
+
+\vspace{1cm}
+\section{Requisitos Funcionais do Site}\label{ap:requisitos-site-table}
+{\small % Reduz o tamanho da fonte para economizar espaço
+\begin{longtable}{|>{\raggedright}p{2.5cm}|>{\raggedright}p{4cm}|p{6cm}|>{\raggedright}p{2cm}|}
+\caption{Requisitos Funcionais do Site}
+\hline
+\textbf{Identificador} & \textbf{Nome} & \textbf{Descrição} & \textbf{Prioridade} \\
+\hline
+\endfirsthead % Cabeçalho da primeira página
+\hline
+\textbf{Identificador} & \textbf{Nome} & \textbf{Descrição} & \textbf{Prioridade} \\
+\hline
+\endhead % Cabeçalho das páginas seguintes
+RFS001 & Publicar Trabalhos Escritos & Permitir a publicação de artigos, relatórios de PIBIC, e-books e outras produções acadêmicas, organizados por categorias e tags. & Essencial \\
+\hline
+RFS002 & Exibir Galeria de Imagens & Oferecer uma galeria de imagens relacionada aos sítios arqueológicos, com suporte para visualização ampliada. & Importante \\
+\hline
+RFS003 & Baixar Modelos 3D & Oferecer a opção de download de modelos 3D do sítio arqueológico. & Essencial \\
+\hline
+RFS004 & Ambiente Virtual para Download & Disponibilizar o arquivo executável do ambiente virtual desenvolvido na Unreal Engine para download pelos usuários. & Essencial \\
+\hline
+RFS005 & Compartilhar nas Redes Sociais & Permitir o compartilhamento de conteúdos e links diretamente no WhatsApp e E-mail. & Desejável \\
+\hline
+RFS006 & Buscar Trabalhos por Filtros & Oferecer um mecanismo de busca que permita filtrar trabalhos escritos por categorias e por sítios arqueológicos. & Desejável \\
+\hline
+RFS007 & Informações de Contato & Disponibilizar informações de contato como telefone e email para que os usuários possam entrar em contato com os administradores do sistema. & Importante \\
+\hline
+RFS008 & Autenticação de Usuário & Implementar autenticação de usuário, diferenciando permissões entre administradores e leitores. & Essencial \\
+\hline
+RFS009 & Gerenciamento de Conteúdo & Permitir que administradores adicionem, editem ou removam postagens e outros conteúdos diretamente no sistema. & Essencial \\
+\hline
+RFS010 & Alterar Layout do Site & Administradores devem poder modificar o layout do site, sem a necessidade de programação. & Desejável \\
+\hline
+RFS011 & Modo Escuro/Claro & Oferecer uma alternância entre modos escuro e claro para a interface. & Desejável \\
+\hline
+RFS012 & Exibir Mapa dos Sítios Arqueológicos & Exibir mapas interativos, integrados ao Google Maps, para a localização dos sítios arqueológicos. & Importante \\
+\hline
+RFS013 & Monitoramento de Acessos & Integrar ferramentas como Google Analytics para coletar dados sobre o número de acessos e comportamento dos usuários no site. & Importante \\
+\hline
+\end{longtable}
+} % Fim do ambiente \small
+
+
+
+\section{Requisitos Não Funcionais do site}
+
+{\small % Reduz o tamanho da fonte para economizar espaço
+\begin{longtable}{|>{\raggedright}p{2.5cm}|>{\raggedright}p{4cm}|p{6cm}|>{\raggedright}p{2cm}|}
+\caption{Tabela de Requisitos Não Funcionais}
+\label{ap:requisitos-nao-funcionais-site-table}
+\hline
+\textbf{Identificador} & \textbf{Nome} & \textbf{Descrição} & \textbf{Prioridade} \\
+\hline
+\endfirsthead % Cabeçalho da primeira página
+\hline
+\textbf{Identificador} & \textbf{Nome} & \textbf{Descrição} & \textbf{Prioridade} \\
+\hline
+\endhead % Cabeçalho das páginas seguintes
+RNFS001 & Tempo de Carregamento & O sistema deve carregar as páginas em até 3 segundos em uma conexão de 5 Mbps. & Essencial \\
+\hline
+RNFS002 & Performance Visível & As páginas principais devem exibir conteúdo visível para o usuário em até 2 segundos após o carregamento inicial. Deve atingir pelo menos 80/100 de pontuação em performance no Lighthouse. & Essencial \\
+\hline
+RNFS003 & Escalabilidade & O sistema suportar até 10.000 visitantes simultâneos sem perdas expressivas na performance.  & Importante \\
+\hline
+RNFS004 & Manutenibilidade & O código do sistema deve ser modular e seguir boas práticas de desenvolvimento, facilitando atualizações e correções futuras. & Importante \\
+\hline
+RNFS005 & Segurança & O sistema deve garantir a segurança dos dados por meio de HTTPS, e deve garantir a autenticação segura de usuários por meio de provedores \textit{Single Sign-On} (SSO) confiáveis, como o Google, com proteção contra acesso não autorizado.  & Essencial \\
+\hline
+RNFS006 & Acessibilidade & O site deve seguir as diretrizes WCAG 2.1 (nível AA), garantindo suporte a leitores de tela, navegação por teclado e contraste adequado. Deve atingir pelo menos 80/100 de pontuação em acessibilidade no Lighthouse. & Importante \\
+\hline
+RNFS007 & Compatibilidade com Navegadores & O sistema deve ser compatível com os navegadores mais utilizados (Google Chrome, Firefox, Safari e Edge) em suas versões mais recentes. & Importante \\
+\hline
+RNFS008 & Responsividade & O site deve ser responsivo, oferecendo uma experiência adequada em dispositivos móveis, tablets e desktops. & Essencial \\
+\hline
+RNFS009 & Confiabilidade & O sistema deve ter uma disponibilidade mínima de 99,9\% mensal. & Essencial \\
+\hline
+RNFS010 & Tolerância a Falhas & O sistema deve implementar backups para garantir a recuperação de dados em caso de falhas. & Importante \\
+\hline
+RNFS011 & Custos Operacionais Reduzidos & O sistema deve ser projetado para funcionar com ferramentas e serviços gratuitos sempre que possível, reduzindo custos operacionais. & Desejável \\
+\hline
+RNFS012 & SEO (Otimização para Motores de Busca) & O sistema deve ser otimizado para SEO, garantindo que o conteúdo seja facilmente encontrado em mecanismos de busca como Google. & Importante \\
+\hline
+RNFS013 & Integração com Serviços Externos & O sistema deve permitir integração fluida com plataformas como Sanity (CMS), Google Maps, Flickr e Google Drive. & Essencial \\
+\hline
+\end{longtable}
+} % Fim do ambiente \small
