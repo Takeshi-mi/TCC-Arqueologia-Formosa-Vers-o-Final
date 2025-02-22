@@ -143,9 +143,8 @@ Devido ao tamanho do modelo inicial (102 milhões de polígonos), foi necessári
 
   \subsection{Reprojeção de textura do modelo de alta resolução para o modelo simplificado, mantendo a qualidade visual.} 
   
-Para manter a qualidade visual do modelo simplificado, foi aplicada a técnica de reprojeção de textura \ref{fig:desenho bom}. Essa técnica permite utilizar a textura do modelo original de alta qualidade no modelo simplificado, resultando em um equilíbrio ideal entre detalhamento visual e peso computacional. Primeiro é feito o processo de \textit{unwrap}, que pode ser traduzido como "desdobramento UV" ou "mapeamento UV" (Figura \ref{fig:unwrap}). Esta etapa minimiza distorções e sobreposições, garantindo que a textura se encaixe ao objeto 3D de forma realística, facilitando a transposição de texturas de um modelo para o outro. 
+Para manter a qualidade visual do modelo simplificado, foi aplicada a técnica de reprojeção de textura \ref{fig:desenho bom}. Essa técnica permite utilizar a textura do modelo original de alta qualidade no modelo simplificado, resultando em um equilíbrio ideal entre detalhamento visual e peso computacional. Primeiro é feito o processo de \textit{ uv unwrap}, que pode ser traduzido como "desdobramento UV" ou "mapeamento UV" (Figura \ref{fig:unwrap}). Esta etapa minimiza distorções e sobreposições, garantindo que a textura se encaixe ao objeto 3D de forma realística, facilitando a transposição de texturas de um modelo para o outro. 
 \begin{figure}[H]
-        \centering
         \includegraphics[height=8cm, keepaspectratio]{img/reality e fotogrametria processo/unwrap.png}
         \caption{Processo de Mapeamento UV. \\
             \textbf{Fonte:} Elaborado pelo autor, 2025.}
@@ -173,7 +172,7 @@ O processo de fotogrametria no Reality Capture demonstrou ser uma ferramenta pod
 \label{sec:ciclo2_unreal}
 A escolha da plataforma Unreal Engine 5.4 para a criação do ambiente virtual 3D se justifica pela sua capacidade de gerar experiências imersivas e interativas. O Unreal Engine é um motor de criação de jogos amplamente utilizado na indústria de jogos, cinema e arquitetura. A plataforma oferece recursos como simulação de luz, movimentações de câmera e personagens, e a possibilidade de interagir com os elementos do ambiente, tornando o ambiente virtual 3D mais realista e envolvente \citep{silva2022realidade}.
 
-\textbf{Objetivo do ciclo}: Desenvolver um ambiente virtual interativo na Unreal Engine 5.4 que atenda aos requisitos funcionais RFA002 (Navegação em Terceira Pessoa), RFA003 (Alternância de Câmera), RFA004 (Avatar Personalizado), bem como aos requisitos não funcionais RNFA001 (Compatibilidade com Windows), RNFA002 (Documentação de Instalação) e RNFA003 (Instalação Simplificada). Este ciclo aborda a importação do modelo 3D otimizado, a criação do cenário virtual, a implementação de funcionalidades interativas e a preparação para distribuição.
+\textbf{Objetivo do ciclo}: Desenvolver um ambiente virtual interativo na Unreal Engine 5.4 que atenda aos requisitos funcionais RFA002 (Navegação em Terceira Pessoa), RFA003 (Alternância de Câmera), RFA004 (Avatar Personalizado), bem como aos requisitos não funcionais RNFA001 (Compatibilidade com Windows) e RNFA002  (Instalação Simplificada). Este ciclo aborda a importação do modelo 3D otimizado, a criação do cenário virtual, a implementação de funcionalidades interativas e a preparação para distribuição.
 
 \subsection{Importação do Modelo 3D Otimizado na Unreal Engine 5.4}
 O modelo 3D simplificado e texturizado, gerado no Reality Capture durante o Ciclo 1, foi importado para a Unreal Engine 5.4. Durante a importação, foram realizados ajustes nas propriedades do modelo, incluindo:
@@ -356,7 +355,7 @@ O Ciclo 2 resultou na criação de um ambiente virtual interativo e imersivo, in
 \section{Ciclo 3: Prototipação do Novo Site}
 \label{sec:ciclo3_site}
 
-\textbf{Objetivo do Ciclo}: Desenvolver um protótipo o novo site, atendendo aos requisitos funcionais RFS002 (Exibir Galeria de Imagens), RFS006 (Buscar Trabalhos por Filtros) e RFS007 (Informações de Contato), bem como aos requisitos não funcionais RNFS006 (Acessibilidade), RNFS008 (Responsividade), RNFS007 (Compatibilidade com Navegadores) e RNFS012 (SEO).
+\textbf{Objetivo do Ciclo}: Desenvolver um protótipo o novo site, atendendo aos requisitos funcionais RFS002 (Exibir Galeria de Imagens), RFS006 (Buscar Trabalhos por Filtros) e RFS007 (Informações de Contato), bem como aos requisitos não funcionais RNFS006 (Acessibilidade), RNFS008 (Responsividade) e RNFS012 (SEO).
 
 \subsection{Análise das Referências e Inspirações}
 O processo teve início com uma análise detalhada das referências e inspirações fornecidas pelo professor Edson Borges por meio de entrevista e questionário, disponível no Apêndice \ref{ap:entrevista}. Essas referências incluíam exemplos de sites educacionais, culturais e interativos, que serviram como base para alinhar as expectativas e a visão do projeto. A análise permitiu identificar elementos-chave, como estilo visual minimalista e moderno, ênfase na acessibilidade e usabilidade, e coerência com a identidade cultural de páginas de Arqueologia. A Figura \ref{fig:inpirações} ilustra algumas das referências analisadas durante esta etapa, que foram colocadas lado a lado no Figma.
@@ -510,7 +509,7 @@ O objetivo deste ciclo é implementar o a interface e as funcionalidades planeja
         \item \textbf{Implementação de páginas-chave}:
         \begin{enumerate}
             \item Página inicial com navegação hierárquica, garantindo fácil acesso às principais seções do site (RFS006, RNFS014);
-            \item Seções específicas para sítios arqueológicos, incluindo galerias de imagens (RFS002) e mapa interativo personalizado com a localização dos sítios integrados ao \textit{Google My Maps}\footnote{É uma ferramenta do Google Permite a criação, edição e compartilhamento de mapas personalizados online} (RFS012);
+            \item Seções específicas para sítios arqueológicos, incluindo galerias de imagens (RFS002) e mapa interativo personalizado com a localização dos sítios integrados ao \textit{Google My Maps}\footnote{É uma ferramenta do Google Permite a criação, edição e compartilhamento de mapas personalizados online.} (RFS012);
             \item Página de Contato, com formulário funcional e informações de contato visíveis (RFS007);
             \item Página de trabalhos escritos com filtros dinâmicos, permitindo busca por categorias e tags (RFS006);
             \end{enumerate}
@@ -596,7 +595,7 @@ O Ciclo 4 resultou no desenvolvimento completo do site, atendendo plenamente aos
 
 Para garantir que a solução atenda aos requisitos definidos foram realizados testes de usabilidade, com usuários clicando e testando as funcionalidades e verificando se estavam de acordo com o que foi planejado e com auxílio de análise heurística.
 
-Também foi verificada a performance e acessibilidade do site por meio da ferramenta \textit{Lighthouse}. Os resultados dos testes estão apresentados na seção de resultados.
+Também foi verificada a performance e acessibilidade do site por meio da ferramenta \textit{Lighthouse}. Os resultados dos testes estão apresentados no Capítulo \ref{cap:resultados}.
 O site foi testado em 6 navegadores diferentes para verificar a compatibilidade. Os navegadores foram: \textit{Microsoft Edge, Google Chrome, Opera GX, Firefox, Brave, e Safari}.
 
 Foi produzido um plano de testes detalhado que não foi implementado completamente, mas pode servir como direcionamento futuro. O plano de testes está no Apêndice \ref{ap:plano de testes}.
